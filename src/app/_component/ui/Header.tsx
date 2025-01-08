@@ -25,7 +25,7 @@ export default function Header() {
   }, []);
   return (
     isClient && (
-      <div className="fixed top-0 flex h-[65px] w-full items-center justify-between px-5">
+      <div className="fixed top-0 flex w-full items-center justify-between p-5">
         {headerType(pathname) === 'logo' && (
           <>
             <Link href="/">
@@ -54,7 +54,7 @@ export default function Header() {
                 className="cursor-pointer"
               />
             </div>
-            <div className="md:text-xl">{getTitleFromSlug(pathname, isDynamic)}</div>
+            <div className="md:text-xl text-lg">{getTitleFromSlug(pathname, isDynamic)}</div>
           </>
         )}
         {/* 추후 메뉴 디자인 만들어지면 메뉴 컴포넌트로 대체 */}
