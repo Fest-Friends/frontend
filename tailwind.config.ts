@@ -14,6 +14,7 @@ export default {
         areaBg: 'var(--areaBg)',
         text: 'var(--text)',
         textLess: 'var(--textLess)',
+        placeholder: 'var(--textPlaceholder)',
       },
     },
   },

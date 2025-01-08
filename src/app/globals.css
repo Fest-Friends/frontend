@@ -21,6 +21,7 @@
     /* grayScale */
     --text: white;
     --textLess: #CCCCCC;
+    --textPlaceholder: #818181;
   }
 }
 
