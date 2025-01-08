@@ -3,7 +3,7 @@
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getTitleFromSlug } from '@/app/_constants/getTitleFromSlug';
 
 function headerType(pathname: string): string {
@@ -18,8 +18,13 @@ export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
+  const [isClient, setIsclient] = useState(false);
   const [isDynamic] = useState<boolean>(Object.keys(params).length !== 0);
+  useEffect(() => {
+    setIsclient(true);
+  }, []);
   return (
+    isClient && (
       <div className="fixed top-0 flex h-[65px] w-full items-center justify-between px-5">
         {headerType(pathname) === 'logo' && (
           <>
@@ -56,4 +61,5 @@ export default function Header() {
         <Image width={24} height={24} alt="메뉴" src="/image/menu.png" className="cursor-pointer" />
       </div>
     )
+  );
 }
