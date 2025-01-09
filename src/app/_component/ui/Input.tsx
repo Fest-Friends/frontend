@@ -28,9 +28,9 @@ export default function Input({
         <input type={type} placeholder={placeholder} value={value} className='w-full bg-transparent text-sm focus:outline-none placeholder:placeholder'/>
         {isImg && (
           <Image
-            width={16}
-            height={16}
-            src="/image/arrow_back.png"
+            width={20}
+            height={20}
+            src="/image/visibility.png"
             alt="icon"
           />
         )}
