@@ -24,8 +24,8 @@ export default function Input({
 
   return (
     isClient && (
-      <div className='flex items-center gap-4 w-full py-3 px-4 rounded-xl bg-areaBg'>
-        <input type={type} placeholder={placeholder} value={value} className='w-full bg-transparent text-sm focus:outline-none placeholder:text-textPlaceholder'/>
+      <div className='flex items-center gap-3 w-full py-3 px-4 rounded-xl bg-areaBg'>
+        <input type={type} placeholder={placeholder} value={value} className='w-full bg-transparent text-sm focus:outline-none placeholder:placeholder'/>
         {isImg && (
           <Image
             width={16}
