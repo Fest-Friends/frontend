@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="text-text">
+      <body className="text-white">
         <TanStackProvider>
           <Header />
           <div>{children}</div>
