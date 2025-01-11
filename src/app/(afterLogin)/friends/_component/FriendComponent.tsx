@@ -1,13 +1,15 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Friend } from '../../_types/friends';
 
-export function FriendComponent() {
+export function FriendComponent({ id, introduction, name, gender, mbti, friendType,volume }: Friend) {
   return (
-    <div className="flex w-full justify-between bg-areaBg p-4 rounded-lg">
+    <Link href={`/friends/${id}`} className="flex w-full justify-between bg-areaBg p-4 rounded-lg">
       <div>
-        <div className="text-sm font-medium leading-[19.6px] text-textLess">공연 한줄소개</div>
+        <div className="text-sm font-medium leading-[19.6px] text-textLess">{introduction}</div>
         <div className="flex items-center gap-3">
-          <div className="text-xl font-semibold">프렌즈 이름</div>
+          <div className="text-xl font-semibold">{name}</div>
           <div className="flex items-center gap-1">
             <Image
               src="/image/volume_1.png"
@@ -16,17 +18,17 @@ export function FriendComponent() {
               className="h-5 w-5 object-contain"
               alt="프렌즈 볼륨"
             />
-            <div className="text-[28px] font-medium leading-[24px] text-primary">72</div>
+            <div className="text-[28px] font-medium leading-[24px] text-primary">{volume}</div>
           </div>
         </div>
         <div className="mt-5 flex flex-col gap-1 text-sm font-medium leading-[19.6px]">
           <div className="flex gap-8">
             <div className="text-textLess">성별</div>
-            <div>남</div>
+            <div>{gender}</div>
           </div>
           <div className="flex gap-8">
             <div className="text-textLess">MBTI</div>
-            <div>ISTJ</div>
+            <div>{mbti}</div>
           </div>
         </div>
       </div>
@@ -37,6 +39,6 @@ export function FriendComponent() {
         height={112}
         className="h-full"
       />
-    </div>
+    </Link>
   );
 }
