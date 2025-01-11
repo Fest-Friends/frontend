@@ -1,28 +1,27 @@
 'use client';
-import { useEffect, useState } from 'react';
+
+type variantType = 'default' | 'secondary';
 
 interface ButtonProps {
   text?: string;
   mt?: string;
+  variant?: variantType;
 }
 
-export default function Button({
-  text = 'button',
-  mt,
-}: ButtonProps) {
-
-  const [isClient, setIsclient] = useState(false);
-
-  useEffect(() => {
-    setIsclient(true);
-  }, []);
-
+export default function Button({ text = 'button', mt, variant = 'default' }: ButtonProps) {
+  // useEffect(() => {
+  //   setIsclient(true);
+  // }, []);
+  const variantCss: Record<variantType, string> = {
+    default: 'bg-primary text-textDark ',
+    secondary: 'text-primary border border-primary',
+  };
   return (
-    isClient && (
-      <button className="first-line:flex items-center justify-center w-full py-3 rounded-xl bg-primary text-textDark text-sm font-semibold" 
-              style={{ marginTop: mt }}>
-        {text}
-      </button>
-    )
+    <button
+      className={`w-full items-center justify-center rounded-xl py-3 first-line:flex ${variantCss[variant]} text-sm font-semibold`}
+      style={{ marginTop: mt }}
+    >
+      {text}
+    </button>
   );
 }
