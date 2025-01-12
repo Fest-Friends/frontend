@@ -54,7 +54,7 @@ export default function Header() {
                 className="cursor-pointer"
               />
             </div>
-            <div className="md:text-xl text-lg">{getTitleFromSlug(pathname, isDynamic)}</div>
+            <div className="text-lg md:text-xl">{getTitleFromSlug(pathname, isDynamic)}</div>
           </>
         )}
         {/* 추후 메뉴 디자인 만들어지면 메뉴 컴포넌트로 대체 */}
