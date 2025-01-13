@@ -29,7 +29,7 @@ const CategoryItem = ({
         alt="포스터"
         className="mr-4 flex-shrink-0 rounded-lg object-cover"
       />
-      <div className="backgr flex h-[142px] flex-col justify-between">
+      <div className="flex h-[142px] flex-col justify-between">
         <div>
           <p className="text-textPlaceholder mb-1 text-sm font-medium">{location}</p>
           <p className="h-12 overflow-scroll text-base font-semibold text-text">{name}</p>
