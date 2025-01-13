@@ -8,6 +8,7 @@ interface CategoryItemProps {
   imageUrl: string;
   likes: number;
   searchFriends: number;
+  isLike: boolean;
 }
 
 const CategoryItem = ({
@@ -17,6 +18,7 @@ const CategoryItem = ({
   imageUrl,
   likes,
   searchFriends,
+  isLike,
 }: CategoryItemProps) => {
   return (
     <div className="border-textMuted flex w-full border-b py-4">
@@ -41,7 +43,7 @@ const CategoryItem = ({
                 className="mr-1 flex-shrink-0"
                 width={16}
                 height={16}
-                src="/image/favorite_active.png"
+                src={`/image/favorite_${isLike ? 'active' : 'deActive'}.png`}
                 alt="좋아요"
               />
               <p className="text-textPlaceholder text-sm font-medium"> {likes}</p>

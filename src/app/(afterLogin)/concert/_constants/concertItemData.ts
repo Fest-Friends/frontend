@@ -17,7 +17,7 @@ export const concertItemData = [
     imageUrl: "/image/example.png",
     likes: 43,
     searchFriends: 22,
-    isLike: false
+    isLike: true
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const concertItemData = [
     imageUrl: "/image/example.png",
     likes: 43,
     searchFriends: 22,
-    isLike: false
+    isLike: true
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ export const concertItemData = [
     imageUrl: "/image/example.png",
     likes: 43,
     searchFriends: 22,
-    isLike: false
+    isLike: true
   },
   
 ];

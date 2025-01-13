@@ -14,6 +14,7 @@ const CategoryList = () => {
           imageUrl={item.imageUrl}
           likes={item.likes}
           searchFriends={item.searchFriends}
+          isLike={item.isLike}
         />
       ))}
     </div>
