@@ -5,5 +5,5 @@ export interface Friend {
   gender: string;
   mbti: string;
   volume:number;
-  friendType: "1" | "2" | "3" | "4";
+  friendType: "A" | "B" | "C" | "D";
 }

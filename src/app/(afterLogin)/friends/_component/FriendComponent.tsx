@@ -33,7 +33,7 @@ export function FriendComponent({ id, introduction, name, gender, mbti, friendTy
         </div>
       </div>
       <Image
-        src="/image/friend_type.png"
+        src={`/image/friend_type_${friendType}.png`}
         alt="친구 타입"
         width={89}
         height={112}
