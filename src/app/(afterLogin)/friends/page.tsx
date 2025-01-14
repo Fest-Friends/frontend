@@ -15,7 +15,7 @@ export default function Page() {
   
   
   return (
-    <div className="mt-10 w-full px-5">
+    <div className="mt-10 w-full px-5 mb-40">
       <div className="mb-6 text-[28px] leading-[39.2px]">
         나의 성격과 맞는
         <br />
@@ -31,7 +31,7 @@ export default function Page() {
           className="object-contain"
         />
       </div>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 items-center">
       {dummyFriends.map((friend) => (
         <FriendComponent
         key={friend.id}
@@ -44,7 +44,7 @@ export default function Page() {
         volume={friend.volume}
       />
       ))}
-
+      <div className='mt-5 font-medium leading-[22.4px] cursor-pointer'>더보기</div>
       </div>
     </div>
   );
