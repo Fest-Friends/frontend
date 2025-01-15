@@ -12,6 +12,8 @@ export default {
         primary: 'var(--primary)',
         bg: 'var(--bg)',
         areaBg: 'var(--areaBg)',
+
+        textDark: 'var(--textDark)',
         textLess: 'var(--textLess)',
         textMuted : 'var(--textMuted)',
       },
