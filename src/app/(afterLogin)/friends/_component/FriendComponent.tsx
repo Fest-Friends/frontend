@@ -13,7 +13,7 @@ export function FriendComponent({
   volume,
 }: Friend) {
   return (
-    <Link href={`/friends/${id}`} className="flex w-full justify-between rounded-lg bg-areaBg p-4">
+    <Link href={`/friends/${id}`} className="flex w-full justify-between items-end rounded-lg bg-areaBg p-4">
       <div>
         <div className="text-sm font-medium leading-[19.6px] text-textLess">{introduction}</div>
         <div className="flex items-center gap-3">
