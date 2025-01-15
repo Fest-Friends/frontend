@@ -12,11 +12,8 @@ export default {
         primary: 'var(--primary)',
         bg: 'var(--bg)',
         areaBg: 'var(--areaBg)',
-        text: 'var(--text)',
         textLess: 'var(--textLess)',
         textMuted : 'var(--textMuted)',
-        textPlaceholder:'var(--textPlaceholder)',
-     
       },
     },
   },

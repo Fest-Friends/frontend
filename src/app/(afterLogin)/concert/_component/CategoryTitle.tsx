@@ -20,12 +20,12 @@ const CategoryTitle = () => {
         scrollbarWidth: 'none',
         msOverflowStyle: 'none',
       }}
-      className={`w-full overflow-scroll whitespace-nowrap px-5 py-6 [&::-webkit-scrollbar]:hidden`}
+      className={`w-full overflow-scroll whitespace-nowrap p-5 [&::-webkit-scrollbar]:hidden flex gap-5`}
     >
       {categoryTitleData.map((item, idx) => (
         <button
           onClick={() => handleClick(idx)}
-          className={`${isActive === idx ? 'text-primary' : 'text-textMuted'} w-fit pr-5 text-lg font-normal`}
+          className={`${isActive === idx ? 'text-primary' : 'text-textMuted'} w-fit text-lg ${isActive === idx ? 'font-semibold' : 'font-medium'} `}
           key={item}
         >
           {item}

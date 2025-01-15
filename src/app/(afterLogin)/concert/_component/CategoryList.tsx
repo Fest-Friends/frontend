@@ -4,8 +4,8 @@ import CategoryItem from './CategoryItem';
 
 const CategoryList = () => {
   return (
-    <div className="w-full px-5">
-      {concertItemData.map((item) => (
+    <div className="w-full px-5 pb-5">
+      {concertItemData.map((item, idx) => (
         <CategoryItem
           key={item.id}
           name={item.name}
@@ -15,6 +15,7 @@ const CategoryList = () => {
           likes={item.likes}
           searchFriends={item.searchFriends}
           isLike={item.isLike}
+          isFirst={idx === 0}
         />
       ))}
     </div>

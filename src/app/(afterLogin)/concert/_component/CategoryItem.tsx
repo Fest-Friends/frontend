@@ -9,6 +9,7 @@ interface CategoryItemProps {
   likes: number;
   searchFriends: number;
   isLike: boolean;
+  isFirst?: boolean;
 }
 
 const CategoryItem = ({
@@ -19,9 +20,12 @@ const CategoryItem = ({
   likes,
   searchFriends,
   isLike,
+  isFirst,
 }: CategoryItemProps) => {
   return (
-    <div className="border-textMuted flex w-full border-b py-4">
+    <div className={`border-areaBg flex w-full border-b py-4 ${
+      isFirst ? 'pt-0' : ''
+    }`}>
       <Image
         width={107}
         height={142}
@@ -29,16 +33,16 @@ const CategoryItem = ({
         alt="포스터"
         className="mr-4 flex-shrink-0 rounded-lg object-cover"
       />
-      <div className="flex h-[142px] flex-col justify-between">
-        <div>
-          <p className="text-textPlaceholder mb-1 text-sm font-medium">{location}</p>
-          <p className="h-12 overflow-scroll text-base font-semibold text-text">{name}</p>
+      <div className="flex flex-col justify-between">
+        <div className='flex flex-col gap-1'>
+          <p className="text-textMuted text-sm">{location}</p>
+          <p className="h-12 overflow-hidden text-base font-semibold text-white">{name}</p>
         </div>
 
-        <div>
-          <p className="mb-1 text-sm font-medium text-text">{period}</p>
-          <div className="flex">
-            <div className="mr-4 flex items-center">
+        <div className='flex flex-col gap-1'>
+          <p className="text-sm text-white">{period}</p>
+          <div className="flex gap-3">
+            <div className="flex items-center">
               <Image
                 className="mr-1 flex-shrink-0"
                 width={16}
@@ -46,7 +50,7 @@ const CategoryItem = ({
                 src={`/image/favorite_${isLike ? 'active' : 'deActive'}.png`}
                 alt="좋아요"
               />
-              <p className="text-textPlaceholder text-sm font-medium"> {likes}</p>
+              <p className="text-textMuted text-sm"> {likes}</p>
             </div>
 
             <div className="flex items-center">
@@ -57,7 +61,7 @@ const CategoryItem = ({
                 src="/image/person.png"
                 alt="찾는친구인원수"
               />
-              <p className="text-textPlaceholder text-sm font-medium">{searchFriends}</p>
+              <p className="text-textMuted text-sm">{searchFriends}</p>
             </div>
           </div>
         </div>
