@@ -8,8 +8,8 @@ interface InfoItemProps {
 const InfoItem = ({ title, content }: InfoItemProps) => {
   return (
     <div className="flex">
-      <p className="mr-5 w-12 text-sm font-medium text-textLess">{title}</p>
-      <p className="text-sm font-medium text-text">{content}</p>
+      <p className="mr-5 w-12 text-sm text-textLess">{title}</p>
+      <p className="text-sm text-white">{content}</p>
     </div>
   );
 };

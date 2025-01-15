@@ -9,16 +9,16 @@ const SearchFriendsToggle = () => {
     setFriendsOn(!friendsOn);
   };
   return (
-    <div className="relative h-2 w-full rounded-[50px] bg-areaBg">
+    <div className="relative h-2 w-full rounded-full bg-areaBg">
       <Button
         style={{
           position: 'absolute',
           top: '50%',
           transform: 'translateY(-50%)',
-          left: `${friendsOn ? 'calc(100% - 168px)' : '0'}`,
-          transition: '0.7s',
+          left: `${friendsOn ? '50%' : '0'}`,
+          transition: '0.3s',
         }}
-        width="168px"
+        width="50%"
         text={friendsOn ? '친구 모집 하기' : '친구 그만 받기'}
         color={friendsOn}
         bgColor="bg"
