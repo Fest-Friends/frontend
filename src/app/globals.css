@@ -10,6 +10,9 @@
   /* grayScale */
   --text: white;
   --textLess: #CCCCCC;
+  --textMuted: #767676;
+  --textPlaceholder: #818181;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +24,7 @@
     /* grayScale */
     --textDark: #333333;
     --textLess: #CCCCCC;
-    --textPlaceholder: #818181;
+    --textMuted: #818181;
   }
 }
 
@@ -34,7 +37,12 @@
 
 html {
   margin: 0 auto;
-  letter-spacing: -0.025rem;
+  font-weight: 500;
+  letter-spacing: -0.052;
+}
+
+p {
+  line-height: 140%;
 }
 
 body {
