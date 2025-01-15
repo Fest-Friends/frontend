@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             <span className="text-[40px] font-semibold text-primary">{data?.volume}</span> Volume
           </div>
           <div className="h-full max-w-[300px] flex-1">
-            <Button text="공연 친구 맺기" variant="secondary" />
+            <Button text="공연 친구 맺기"/>
           </div>
         </div>
       </div>

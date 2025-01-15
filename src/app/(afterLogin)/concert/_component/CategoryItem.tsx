@@ -35,7 +35,7 @@ const CategoryItem = ({
       />
       <div className="flex flex-col justify-between">
         <div className='flex flex-col gap-1'>
-          <p className="text-textMuted text-sm">{location}</p>
+          <p className="text-textLess text-sm">{location}</p>
           <p className="h-12 overflow-hidden text-base font-semibold text-white">{name}</p>
         </div>
 

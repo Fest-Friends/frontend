@@ -9,7 +9,6 @@ interface ButtonProps {
   width?: string;
   color?: boolean;
   bgColor?: string;
-  onClick?: () => void;
   style?: React.CSSProperties;
 }
 
@@ -17,14 +16,13 @@ export default function Button({
   text = 'button',
   mt,
   width = '100%',
-  color = true,
-  bgColor,
   style,
-  onClick,
+  variant = 'default',
 }: ButtonProps) {
+
   const variantCss: Record<variantType, string> = {
-    default: 'bg-primary text-textDark ',
-    secondary: 'text-primary border border-primary',
+    default: 'bg-primary text-textDark',
+    secondary: 'text-textLess border border-textMuted',
   };
   return (
     <button

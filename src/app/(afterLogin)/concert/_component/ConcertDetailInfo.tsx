@@ -41,7 +41,7 @@ const ConcertDetailInfo = () => {
         </div>
         <div className="flex justify-between gap-4">
           <Button text="공연 친구 찾기" width="66%"/>
-          <Button text="알림 등록" width="33%" color={false} bgColor="areaBg" />
+          <Button text="알림 등록" width="33%" variant="secondary"/>
         </div>
       </div>
     </div>

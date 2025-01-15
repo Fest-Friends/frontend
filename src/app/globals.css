@@ -8,11 +8,9 @@
   --areaBg: #282B32;
 
   /* grayScale */
-  --text: white;
+  --textDark: #333333;
   --textLess: #CCCCCC;
-  --textMuted: #767676;
-  --textPlaceholder: #818181;
-
+  --textMuted: #818181;
 }
 
 @media (prefers-color-scheme: dark) {
