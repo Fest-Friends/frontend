@@ -8,6 +8,7 @@
   --areaBg: #282B32;
 
   /* grayScale */
+  --textDark: #333333;
   --text: white;
   --textLess: #CCCCCC;
 }

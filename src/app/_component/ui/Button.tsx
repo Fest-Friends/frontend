@@ -4,13 +4,11 @@ import { useEffect, useState } from 'react';
 interface ButtonProps {
   text?: string;
   mt?: string;
+  width?: string;
+  color?: boolean;
 }
 
-export default function Button({
-  text = 'button',
-  mt,
-}: ButtonProps) {
-
+export default function Button({ text = 'button', mt, width = '100%', color = true }: ButtonProps) {
   const [isClient, setIsclient] = useState(false);
 
   useEffect(() => {
@@ -19,8 +17,14 @@ export default function Button({
 
   return (
     isClient && (
-      <button className="first-line:flex items-center justify-center w-full py-3 rounded-xl bg-primary text-textDark text-sm font-semibold" 
-              style={{ marginTop: mt }}>
+      <button
+        className={`items-center justify-center rounded-xl py-3 text-sm font-semibold first-line:flex ${
+          color
+            ? 'text-textDark bg-primary'
+            : 'border-textPlaceholder border bg-areaBg text-textLess'
+        }`}
+        style={{ marginTop: mt, width: width }}
+      >
         {text}
       </button>
     )
