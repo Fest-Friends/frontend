@@ -6,9 +6,20 @@ interface ButtonProps {
   mt?: string;
   width?: string;
   color?: boolean;
+  bgColor?: string;
+  onClick?: () => void;
+  style?: React.CSSProperties;
 }
 
-export default function Button({ text = 'button', mt, width = '100%', color = true }: ButtonProps) {
+export default function Button({
+  text = 'button',
+  mt,
+  width = '100%',
+  color = true,
+  bgColor,
+  style,
+  onClick,
+}: ButtonProps) {
   const [isClient, setIsclient] = useState(false);
 
   useEffect(() => {
@@ -18,12 +29,13 @@ export default function Button({ text = 'button', mt, width = '100%', color = tr
   return (
     isClient && (
       <button
-        className={`items-center justify-center rounded-xl py-3 text-sm font-semibold first-line:flex ${
+        onClick={onClick}
+        className={`ease-in-outitems-center justify-center rounded-xl py-3 text-sm font-semibold transition-transform duration-500 first-line:flex ${
           color
-            ? 'text-textDark bg-primary'
-            : 'border-textPlaceholder border bg-areaBg text-textLess'
+            ? `text-textDark bg-primary`
+            : `border-textPlaceholder border text-textLess bg-${bgColor}`
         }`}
-        style={{ marginTop: mt, width: width }}
+        style={{ marginTop: mt, width: width, ...style }}
       >
         {text}
       </button>
