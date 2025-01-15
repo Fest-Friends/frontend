@@ -14,14 +14,19 @@ export default function SignUp() {
         {/* 비밀번호 */}
         <div className="flex flex-col gap-3">
           <div className="ml-1 text-base font-semibold text-white">비밀번호</div>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <Input type="password" role="password" placeholder="비밀번호를 입력하세요." isImg />
-            <Input type="password" role="password" placeholder="비밀번호를 한 번 더 입력하세요." isImg />
+            <Input
+              type="password"
+              role="password"
+              placeholder="비밀번호를 한 번 더 입력하세요."
+              isImg
+            />
           </div>
         </div>
       </div>
 
-      <Button text="가입하기" mt="48px"/>
+      <Button text="가입하기" mt="48px" />
     </div>
   );
 }
