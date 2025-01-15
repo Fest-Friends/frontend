@@ -4,7 +4,7 @@ import CategoryItem from './CategoryItem';
 
 const CategoryList = () => {
   return (
-    <div className="w-full px-5 pb-5">
+    <div className="w-full px-5 pb-10">
       {concertItemData.map((item, idx) => (
         <CategoryItem
           key={item.id}
