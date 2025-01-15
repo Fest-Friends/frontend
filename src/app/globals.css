@@ -22,10 +22,7 @@
     --areaBg: #282B32;
 
     /* grayScale */
-<<<<<<< HEAD
-=======
     --textDark: #333333;
->>>>>>> origin/feat/3-concertListPage
     --textLess: #CCCCCC;
     --textMuted: #818181;
   }
@@ -40,11 +37,8 @@
 
 html {
   margin: 0 auto;
-<<<<<<< HEAD
   font-weight: 500;
-=======
-  letter-spacing: -0.025rem;
->>>>>>> origin/feat/3-concertListPage
+  letter-spacing: -0.052;
 }
 
 p {
