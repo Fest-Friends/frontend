@@ -13,13 +13,18 @@ export function FriendComponent({
   volume,
 }: Friend) {
   return (
-    <Link href={`/friends/${id}`} className="flex w-full justify-between items-end rounded-lg bg-areaBg p-4">
-      <div>
-        <div className="text-sm font-medium leading-[19.6px] text-textLess">{introduction}</div>
-        <div className="flex items-center gap-3">
-          <div className="text-xl font-semibold">{name}</div>
+    <Link
+      href={`/friends/${id}`}
+      className="flex w-full items-end justify-between rounded-lg bg-areaBg p-4"
+    >
+      <div className='flex flex-col gap-4'>
+        <div>
+          <div className="text-sm text-textLess">{introduction}</div>
+          <div className="flex items-center">
+            <div className="text-xl font-semibold">{name}</div>
+          </div>
         </div>
-        <div className="mt-[18px] flex gap-6 text-sm font-medium leading-[19.6px]">
+        <div className="flex gap-6 text-sm">
           <div className="flex flex-col gap-1">
             <div className="text-textLess">성별</div>
             <div>{gender}</div>
@@ -29,16 +34,16 @@ export function FriendComponent({
             <div>{mbti}</div>
           </div>
         </div>
-          <div className="mt-[14px] flex items-start gap-0.5">
-            <Image
-              src="/image/volume.png"
-              width={28}
-              height={28}
-              className="object-contain align-middle"
-              alt="프렌즈 볼륨"
-            />
-            <div className="text-[28px] font-medium leading-[24px] text-primary">{volume}</div>
-          </div>
+        <div className="flex items-start gap-1">
+          <Image
+            src="/image/volume.png"
+            width={28}
+            height={28}
+            className="object-contain align-middle"
+            alt="프렌즈 볼륨"
+          />
+          <div className="text-[28px] font-medium leading-[24px] text-primary">{volume}</div>
+        </div>
       </div>
       <Image
         src={`/image/friend_type_${friendType}.png`}

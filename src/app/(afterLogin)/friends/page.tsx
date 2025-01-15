@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FriendComponent } from './_component/FriendComponent';
 import { Friend } from '../_types/friends';
 import FilterDropdown from './_component/FilterDropdown';
@@ -6,7 +5,6 @@ export default function Page() {
   const dummyFilters: { title: string; categorys: string[] }[] = [
     { title: '성별', categorys: ['무관', '남성', '여성'] },
     { title: '감상 타입', categorys: ['무관', '감상해요!', '즐겨요!'] },
-    { title: '볼륨 지수', categorys: ['무관', '높은 순', '낮은 순'] },
   ];
   const dummyFriends: Friend[] = [
     {
@@ -84,19 +82,19 @@ export default function Page() {
   ];
 
   return (
-    <div className="mb-40 mt-10 w-full px-5">
-      <div className="mb-6 text-[28px] leading-[39.2px]">
+    <div className="py-10 w-full px-5">
+      <div className="mb-6 text-2xl">
         나의 성격과 맞는
         <br />
         <span className="font-semibold text-primary">공연 프렌즈</span>를 찾아보세요!
       </div>
-      <div className="flex w-full cursor-pointer justify-start gap-4 py-5 text-sm font-medium leading-[19.6px] text-textLess">
+      <div className="flex w-full cursor-pointer justify-start gap-4 py-5 text-sm text-textLess">
         {dummyFilters.map((filter) => (
           <FilterDropdown key={filter.title} title={filter.title} categorys={filter.categorys} />
         ))}
        
       </div>
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-4">
         {dummyFriends.map((friend) => (
           <FriendComponent
             key={friend.id}
@@ -109,7 +107,6 @@ export default function Page() {
             volume={friend.volume}
           />
         ))}
-        <div className="mt-5 cursor-pointer font-medium leading-[22.4px]">더보기</div>
       </div>
     </div>
   );

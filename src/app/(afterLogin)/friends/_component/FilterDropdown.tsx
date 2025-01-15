@@ -27,7 +27,7 @@ const FilterDropdown = ({ title, categorys }: { title: string; categorys: string
       <button
         id="dropdownButton"
         type="button"
-        className={`flex items-center gap-2 ${isOpen ? 'rounded-t-xl bg-areaBg' : 'rounded-xl'} border-2 border-areaBg py-3 pl-5 pr-4 leading-[19.6px] hover:bg-areaBg`}
+        className={`flex items-center gap-2 ${isOpen ? 'rounded-t-xl bg-areaBg' : 'rounded-xl'} border-2 border-areaBg py-3 pl-5 pr-4 hover:bg-areaBg`}
         onClick={toggleDropdown}
       >
         <div>{title}</div>
@@ -36,7 +36,7 @@ const FilterDropdown = ({ title, categorys }: { title: string; categorys: string
           alt="조건 필터링"
           width={12}
           height={12}
-          className={`transform object-contain transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`transform object-contain transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
 
