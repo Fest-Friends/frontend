@@ -22,7 +22,7 @@
     --areaBg: #282B32;
 
     /* grayScale */
-    --text: white;
+    --textDark: #333333;
     --textLess: #CCCCCC;
     --textMuted: #767676;
     --textPlaceholder: #818181;
@@ -38,6 +38,7 @@
 
 html {
   margin: 0 auto;
+  letter-spacing: -0.025rem;
 }
 
 p {

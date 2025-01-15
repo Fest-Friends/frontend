@@ -12,11 +12,10 @@ export default {
         primary: 'var(--primary)',
         bg: 'var(--bg)',
         areaBg: 'var(--areaBg)',
-        text: 'var(--text)',
+        textDark: 'var(--textDark)',
         textLess: 'var(--textLess)',
         textMuted : 'var(--textMuted)',
-        textPlaceholder:'var(--textPlaceholder)',
-     
+        placeholder: 'var(--textPlaceholder)',
       },
     },
   },
