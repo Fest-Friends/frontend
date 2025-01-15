@@ -12,8 +12,8 @@ export default function Login() {
         <Input type="password" role="password" placeholder="비밀번호를 입력하세요." isImg />
       </div>
       <Button text="로그인" />
-      <div className='flex items-center text-sm gap-2 font-medium ml-1'>
-        <span className='text-textLess font-medium'>아직 회원이 아니신가요?</span>
+      <div className='flex items-center text-sm gap-2 ml-1'>
+        <span className='text-textLess'>아직 회원이 아니신가요?</span>
         <Link href="/signUp" className="text-primary font-semibold">회원가입</Link>
       </div>
     </div>
