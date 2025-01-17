@@ -4,8 +4,8 @@ import HomeLayout from './_component/layout/HomeLayout';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HomeLayout />
-    </div>
+    </>
   );
 }
