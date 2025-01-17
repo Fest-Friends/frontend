@@ -6,7 +6,7 @@ interface InputProps {
   type?: string;
   placeholder: string;
   value?: string;
-  role?: string;
+  role?: 'search' | 'password';
   isImg?: boolean; // Input에 이미지 추가 여부 ex)password, search
 }
 
@@ -48,14 +48,20 @@ export default function Input({
           className="placeholder:placeholder w-full bg-transparent text-sm text-white focus:outline-none"
         />
 
-        {role === 'password' && isImg && (
+        {isImg && (
           <Image
             width={20}
             height={20}
-            src={inputType === 'password' ? '/image/visibility_off.png' : '/image/visibility.png'}
+            src={
+              role === 'search'
+                ? '/image/search.png'
+                : inputType === 'password'
+                  ? '/image/visibility_off.png'
+                  : '/image/visibility.png'
+            }
             alt="toggle visibility"
-            onClick={togglePWVisibility}
-            className="cursor-pointer"
+            onClick={role === 'password' ? togglePWVisibility : undefined}
+            className={role === 'password' ? 'cursor-pointer' : ''}
           />
         )}
       </div>
