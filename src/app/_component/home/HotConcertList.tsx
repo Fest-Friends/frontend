@@ -1,5 +1,5 @@
-import CategoryItem from "@/app/(afterLogin)/concert/_component/CategoryItem";
-import { concertItemData } from "@/app/(afterLogin)/concert/_constants/concertItemData";
+import CategoryItem from "@/app/_component/CategoryItem";
+import { concertItemData } from "@/app/_constants/concertItemData";
 
 export const HotConcertList =  () => (
   <>
